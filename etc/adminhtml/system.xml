@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="ibnab_config" translate="label" sortOrder="200">
+            <label>Ibnab</label>
+        </tab>
+        <section id="ibnab_activebuy_config" translate="label" type="text" sortOrder="45" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Active Buy</label>
+            <tab>ibnab_config</tab>
+            <resource>Ibnab_PaymentFee::ibnab_paymentfee_config</resource>  
+            <group id="general" translate="label"  sortOrder="91" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <comment></comment>
+                <field id="active" translate="label" sortOrder="220" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>active buy</label>
+                    <frontend_model>Ibnab\Table\Block\System\Config\Form\Field\Active</frontend_model>
+                    <backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>
+                </field>
+            </group>  
+        </section>
+    </system>
+</config>
